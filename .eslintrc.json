@@ -1,0 +1,24 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["import"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:import/typescript",
+		"prettier"
+	],
+	"rules": {
+		"import/order": [
+			2,
+			{
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		]
+	}
+}

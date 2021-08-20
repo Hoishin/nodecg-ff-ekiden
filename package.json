@@ -1,0 +1,81 @@
+{
+	"name": "nodecg-ff-ekiden",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"prepare": "simple-git-hooks",
+		"format": "sort-package-json && prettier --write \"**/*.{ts,tsx,json,yml,yaml,md}\"",
+		"dev": "webpack --mode development --watch",
+		"prod": "webpack --mode production"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx lint-staged"
+	},
+	"lint-staged": {
+		"package.json": "sort-package-json",
+		"*.{ts,tsx,json,yml,yaml,md}": "prettier --write",
+		"*.{ts,tsx}": "eslint --fix"
+	},
+	"dependencies": {
+		"tslib": "^2.3.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.15.0",
+		"@babel/preset-env": "^7.15.0",
+		"@babel/preset-react": "^7.14.5",
+		"@babel/preset-typescript": "^7.15.0",
+		"@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+		"@types/node": "14",
+		"@types/react": "^17.0.19",
+		"@types/react-dom": "^17.0.9",
+		"@types/webpack-node-externals": "^2.5.2",
+		"@types/webpack-plugin-serve": "^1.4.1",
+		"@typescript-eslint/eslint-plugin": "^4.29.2",
+		"@typescript-eslint/parser": "^4.29.2",
+		"babel-loader": "^8.2.2",
+		"clean-webpack-plugin": "^4.0.0-alpha.0",
+		"css-loader": "^6.2.0",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.24.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"fork-ts-checker-webpack-plugin": "^6.3.2",
+		"globby": "11",
+		"html-webpack-plugin": "^5.3.2",
+		"lint-staged": "^11.1.2",
+		"modern-normalize": "^1.1.0",
+		"prettier": "^2.3.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-refresh": "^0.10.0",
+		"react-refresh-typescript": "^2.0.2",
+		"simple-git-hooks": "^2.6.1",
+		"sort-package-json": "^1.50.0",
+		"style-loader": "^3.2.1",
+		"ts-loader": "^9.2.5",
+		"ts-node": "^10.2.1",
+		"ts-nodecg": "^0.3.1",
+		"typescript": "^4.3.5",
+		"webpack": "^5.51.1",
+		"webpack-cli": "^4.8.0",
+		"webpack-node-externals": "^3.0.0",
+		"webpack-plugin-serve": "^1.5.0"
+	},
+	"nodecg": {
+		"compatibleRange": "^1.0.0",
+		"dashboardPanels": [
+			{
+				"file": "test.html",
+				"name": "test",
+				"title": "test"
+			}
+		],
+		"graphics": [
+			{
+				"file": "main.html",
+				"width": "1920",
+				"height": "1080"
+			}
+		]
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["ESNext", "DOM"],
+		"module": "ESNext",
+		"jsx": "react-jsx",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": false
+	},
+	"include": ["**/*.ts", "**/*.tsx", "../nodecg/browser.ts"]
+}
